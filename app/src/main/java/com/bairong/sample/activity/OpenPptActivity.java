@@ -27,7 +27,7 @@ public class OpenPptActivity extends AppCompatActivity {
             startActivity(intent);
         } catch (Exception e) {
             //没有安装第三方的软件会提示
-            Toast toast = Toast.makeText(OpenPptActivity.this, "没有找到打开该文件的应用程序", Toast.LENGTH_SHORT);
+            Toast toast = Toast.makeText(OpenPptActivity.this, "没有找到打开该文件的应用程序", Toast.LENGTH_LONG);
             toast.show();
         }
     }

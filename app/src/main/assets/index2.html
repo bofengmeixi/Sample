@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+	<title>index</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+</head>
+<body>
+<input id="show" style="width:100%;height:2rem;" value="____" />
+<button id="test" class="BR_ATF_ACTION o" style="display: none">button</button>
+<button id="test22" class="" onclick="document.getElementById('test').click()">点击</button>
+
+    <script type="text/javascript">
+		var win = window,
+			doc = document,
+			br = win["BAIRONG"] = win["BAIRONG"] || {},
+			s = doc.createElement("script"),
+//			url = 'wuve.cn:8002/release/braf.min.js?v=2.1.0';
+			url = 'xsdtest.xyb100.com/static/js/loan/braf.min.js?v=2.0.1';   //第一个js路径,前面不要加协议
+			s.type = "text/javascript";
+			s.charset = "utf-8";
+			s.src = url;
+			br.client_id = "333999";
+
+		//=========== config start ============
+			br.config = {
+				timeout : 3000,
+				gidCrossBrowser : false,
+				returnGid : false,
+				brcoreURL : 'xsdtest.xyb100.com/static/js/loan/brcore.min.js?v=2.1.0',   //第二个js路径，前面不要加协议
+				protocol : 'https://'
+			}
+		//=========== config end =============
+
+			br.BAIRONG_INFO = {
+				"app" : "antifraud",
+				"event" : "register"
+			}
+			s.src = (br.config.protocol || '//') + url;
+
+			doc.getElementsByTagName("head")[0].appendChild(s);
+
+		//var isGetSwiftNumberExec = false;
+        window.GetSwiftNumber = function(data){//{gid:'xxxxx'}
+
+			//swiftNumberList.push(data.response.af_swift_number);
+
+			if(win.isGetSwiftNumberExec){
+				return;
+			}
+			win.isGetSwiftNumberExec = true;
+
+			try{
+               var af_swift_number = data.response.af_swift_number;
+            }catch(e){
+			   var af_swift_number = 'null';
+            }
+			document.getElementById('show').value = data.response.af_swift_number;
+
+			//alert(af_swift_number);
+
+		}
+		
+	</script>
+</body>
+</html>

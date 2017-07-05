@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+	<title>index</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+
+<link href="https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/soutu/css/soutu.css" type="text/css" rel="stylesheet">	
+</head>
+<body>
+<img src="https://www.baidu.com/img/bd_logo1.png" />
+<script src="http://www.sohu.com/sohuflash_1.js"></script>
+
+获取swiftNumber
+<!--BR_ATF_ACTION-->
+<div id="console" style="border:1px solid #333;min-height:100px;word-break:break-all;"></div>
+
+<button id="test" class="BR_ATF_ACTION o" style="display:none">button</button>
+
+<button id="test22" class="" onclick="document.getElementById('test').click()">点击获取swiftNumber</button>
+    <script type="text/javascript">
+		var win = window,
+			doc = document,
+			br = win["BAIRONG"] = win["BAIRONG"] || {},
+			s = doc.createElement("script"),
+			pre = "https:" === location.protocol ? "https://" : "http://",
+			url =  'https://static.100credit.com/ifae/js/braf.min.js?v=2.4.0';
+			//url = 'http://www.xxx.com/ifae/js/braf.min.js';
+			s.type = "text/javascript";
+			s.charset = "utf-8";
+			s.src = url;
+			br.client_id = "444333";
+
+			//============= 可选 =============
+			br.config = {
+				timeout : 3000,      
+				gidCrossBrowser : true,     
+                returnGid : false
+			}
+			//================================
+
+			doc.getElementsByTagName("head")[0].appendChild(s);
+			br.BAIRONG_INFO = {
+				"app" : "antifraud",
+				"event" : "lend"
+			}
+
+		//var isGetSwiftNumberExec = false;
+		window.GetSwiftNumber=function(data){
+			if(win.isGetSwiftNumberExec){
+				return;
+			}
+			win.isGetSwiftNumberExec = true;
+
+			
+			if(!data.code){
+				return;
+			}
+
+			try{
+				var af_swift_number = data.response.af_swift_number;
+			}catch(e){
+				var af_swift_number = 'null';
+			}
+
+			
+				document.getElementById('console').innerHTML = af_swift_number;
+			
+
+
+
+		}
+		
+
+
+
+	</script>
+</body>
+</html>
+
+
+
+
+

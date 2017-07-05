@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@mipmap/robot01"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@mipmap/robot02"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@mipmap/robot03"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@mipmap/robot04"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@mipmap/robot05"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@mipmap/robot06"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@mipmap/robot07"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@mipmap/robot08"
+        android:duration="150">
+    </item>
+    <!--<item
+        android:drawable="@mipmap/robot00"
+        android:duration="150">
+    </item>
+    <item
+        android:drawable="@mipmap/robot09"
+        android:duration="150">
+    </item>-->
+
+</animation-list>

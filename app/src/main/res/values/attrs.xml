@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="imagesrc" format="reference"/>
+    <attr name="imagepadding" format="dimension"/>
+    <attr name="text" format="string"/>
+    <attr name="textpadding" format="dimension"/>
+    <attr name="imageloc" format="enum">
+        <enum name="fitXY" value="0"/>
+        <enum name="center" value="1"/>
+    </attr>
+    <attr name="textsize" format="dimension"/>
+
+    <declare-styleable name="CustomView">
+        <attr name="imagesrc"/>
+        <attr name="imagepadding"/>
+        <attr name="text"/>
+        <attr name="textpadding"/>
+        <attr name="imageloc"/>
+        <attr name="textsize"/>
+    </declare-styleable>
+</resources>
